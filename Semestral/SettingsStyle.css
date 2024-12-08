@@ -1,0 +1,352 @@
+body {
+    background-image: url("Eliska Bgn.png");
+    background-attachment: fixed;
+}
+
+.content {
+    margin-top: 80px;
+    display: flex;
+    margin-bottom: 0;
+    position: relative;
+    height: 100%;
+    background-color: #00000065;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+}
+
+.switchBox {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content:flex-start;
+
+}
+
+.mainContent {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    background-color: #20202065;
+    border-radius: 12px;
+
+}
+
+.sideBar {
+    width: 20%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.sideText {
+    padding: 16px;
+}
+
+.sideText:hover {
+    background-color: #66666698;
+    border-radius: 14px;
+}
+
+.sideText:first-child {
+    background-color: #20202098;
+    border-radius: 14px;
+}
+
+
+i.fa {
+    margin: 2px;
+
+}
+
+.MenuUp div {
+    text-align: center;
+    padding: 0.4rem;
+    margin: 0.4rem;
+
+}
+
+.logo {
+    text-decoration: none !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    border: none;
+    text-align: center;
+    color: #ffffff;
+    filter: drop-shadow(0px 2px 1px #000000);
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+
+    /*Has double shadows, what piece of shit*/
+}
+
+.MenuUp .btn {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    color: white;
+    text-shadow: 0px 1px 1px #000000;
+    filter: drop-shadow(0px 2px 1px #000000);
+    background: linear-gradient(180deg, rgba(255, 150, 150, 1) 0%, rgba(255, 200, 150, 1) 100%);
+    border-radius: 24px;
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    max-width: 100px;
+
+}
+
+.MenuUp a:hover {
+    background: radial-gradient(circle, rgba(255, 200, 150, 1) 0%, rgba(255, 150, 150, 1) 100%);
+    filter: drop-shadow(0px 3px 1px #000000);
+
+}
+
+.MenuUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, rgb(255, 238, 176) 0%, rgb(255, 173, 156) 100%);
+    filter: drop-shadow(0px 4px 6px #000000);
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    z-index: 2;
+
+}
+
+.MenuDown {
+    display: none;
+}
+
+.MenuDown button {
+    display: flex;
+    margin: 0.4rem;
+    padding: 0.4rem;
+    color: white;
+    filter: drop-shadow(0px 2px 1px #000000);
+    background: none;
+    border-radius: 24px;
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    max-width: 100px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+
+}
+
+.MenuDown button:hover {
+    filter: drop-shadow(0px 3px 1px #000000);
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    height: 34px;
+}
+
+.sliderText {
+    order: -1;
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 50px;
+    min-height: 50px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    min-width: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff5e5e;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #ffeeb0;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+@media screen and (min-width:1000px) {
+    .MenuUp {
+        display: flex;
+        justify-content: space-between;
+        
+        
+    }
+
+    .MenuUp ul {
+        display: flex;
+
+    }
+
+    .MenuUp :nth-child(2) {
+        order: -1;
+        margin-left: 24px;
+        
+    }
+
+    .MenuUp :nth-child(1){
+        margin-left: auto;
+    }
+
+}
+
+@media screen and (max-width: 1000px) and (min-width:500px){
+    .sliderDescribtion {
+        display: none;
+    }
+
+    .switchBox {
+        justify-content: space-around;
+    }
+
+    .sideText {
+        padding: 0.6rem;
+        font-size: 16px;
+        min-width: 100px;
+    }
+
+    .MenuDown {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        color: #ffffff;
+        background: linear-gradient(180deg, rgb(255, 238, 176) 0%, rgb(255, 173, 156) 100%);
+        align-items: center;
+        justify-content: space-around;
+        filter: drop-shadow(0px -4px 6px #000000);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .MenuDown {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        color: #ffffff;
+        background: linear-gradient(180deg, rgb(255, 238, 176) 0%, rgb(255, 173, 156) 100%);
+        align-items: center;
+        justify-content: space-around;
+        filter: drop-shadow(0px -4px 6px #000000);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .logoBox {
+        padding: 0.2rem;
+        margin: 0.2rem;
+    }
+
+    .MenuUp .btn {
+        font-size: 16px;
+        padding: 0.2rem;
+    }
+
+   
+
+    .MenuDown button {
+        font-size: 12px;
+        padding: 0.2rem;
+    }
+
+    .mainContent {
+        margin: 0.5rem;
+        width: 100%;
+    }
+
+    .sideBar {
+        margin: 0.5rem;
+    }
+
+    .sideText {
+        max-width: 80px;
+        min-width: 60px;
+        max-height: 50px;
+        font-size: 10px;
+        padding: 5px;
+        word-break: break-all;
+        
+    }
+
+    .sliderDescribtion {
+        display: none;
+    }
+
+    .switch {
+        width: 40px;
+        height: 26px;
+    }
+
+    .slider {
+        min-width: 40px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(14px);
+        -ms-transform: translateX(14px);
+        transform: translateX(14px);
+    }
+}

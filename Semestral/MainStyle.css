@@ -1,0 +1,514 @@
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url("Eliska Bgn.png");
+    background-attachment: fixed;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    display: block;
+    align-content: center;
+    height: 100%;
+
+}
+/*When window is zoomed moves with touchpad input?*/
+.masonry {
+    z-index: -2;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 10px;
+    padding: 10px;
+    margin: 0px;
+    
+    height: 100%;
+    overflow: hidden;    
+    
+}
+
+.masonry-item {
+    top: 65px;
+    position: relative;
+    display: grid;
+    align-self: center;
+    justify-items: center;
+    border-radius: 24px;
+    overflow:hidden;
+    
+}
+
+.masonry-item img {
+    display: block;
+    z-index: 0;
+    width: 97%; /* Ensures images fit within the grid cells */
+    height: auto; 
+    object-fit: cover; /* Ensures the image covers the cell properly */
+    border-radius: 24px;
+    border: solid 5px #ffffff;
+}
+
+.masonry-item p {
+    font-family: "Sour Gummy", sans-serif;
+    display: grid;
+    margin: 0;
+    padding-top: 10px; /* Space between image and text */
+    color: #333; /* Text color */
+    font-size: large; /* Text size */
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 3rem;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background: linear-gradient(180deg, #ff9696 0%, #ffc896 100%);
+    
+
+}
+
+.masonry-item span {
+    font-family: "Sour Gummy", sans-serif;
+    font-weight: 600;
+    background-color: #ffffff;
+    padding-left: 10px;
+    border-radius: 24px;
+}
+
+i.fa {
+    margin: 2px;
+
+}
+
+.btnBox {
+    text-align: center;
+    padding: 0.4rem;
+    margin: 0.4rem;
+
+}
+
+.logo{
+    text-decoration: none !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    border: none;
+    text-align: center;
+    color: #ffffff;
+    filter: drop-shadow(0px 2px 1px #000000);
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    align-self: center;
+    
+}
+
+.MenuUp .btn {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    color: white;
+    text-shadow: 0px 1px #000000;
+    filter: drop-shadow(0px 2px 1px #000000);
+    background: linear-gradient(180deg, rgba(255,150,150,1) 0%, rgba(255,200,150,1) 100%);
+    border-radius: 24px;
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    max-width: 100px;
+    
+}
+
+.MenuUp a:hover {
+    background: radial-gradient(circle, rgba(255,200,150,1) 0%, rgba(255,150,150,1) 100%);
+    filter:drop-shadow(0px 3px 1px #000000);
+
+}
+
+.MenuUp {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    color:#ffffff;
+    background: linear-gradient(180deg, rgb(255, 238, 176) 0%, rgb(255, 173, 156) 100%);
+    filter: drop-shadow(0px 4px 6px #000000);
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    z-index: 2;
+    align-items: center;
+    
+}
+
+.MenuDown button{
+    display: flex;
+    margin: 0.4rem;
+    padding: 0.4rem;
+    color: white;
+    filter: drop-shadow(0px 2px 1px #000000);
+    background: none;
+    border-radius: 24px;
+    text-decoration: none;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    max-width: 100px;
+    align-items: center;
+    border: none;
+    cursor: pointer;   
+    
+}
+
+.MenuDown button:hover {
+    filter:drop-shadow(0px 3px 1px #000000);
+}
+
+.MenuLeft {
+    display: none;
+}
+
+@media screen and (max-width: 420px) {
+    
+    .logo {
+        font-size: 26px;
+    }
+
+    .logoBox {
+        padding: 0.2rem;
+        margin: 0.2rem;
+    }
+
+    .MenuUp .btn {
+        font-size: 16px;
+        padding: 0.2rem;
+    }
+
+   
+
+    .MenuDown button {
+        font-size: 12px;
+        padding: 0.2rem;
+    } 
+    
+    .masonry {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+
+    .MenuUp {
+        justify-content: space-around;
+    }
+
+    .MenuDown {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        color: #ffffff;
+        background: linear-gradient(180deg, rgb(255, 238, 176) 0%, rgb(255, 173, 156) 100%);
+        align-items: center;
+        justify-content: space-around;
+        filter: drop-shadow(0px -4px 6px #000000);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        
+    }
+
+    .MenuDown div {
+        text-align: center;
+    
+    }
+
+}
+/*Post Old layout {.posts {
+    box-sizing: border-box;
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 75px;
+    background-color: white;
+    list-style: none;
+    border: solid 2px black;
+    position: static;
+}
+.posts h2 {
+    background-color: #cacfd2;
+    border: 2px black solid;
+    border-radius: 20px;
+    font-family: Itim;
+    padding: 0.4rem;
+    font-size: 20px;
+    position: static;
+    margin: 0;
+    
+}
+
+.posts p {
+    border: solid #cacfd2 2px;
+    font-family: Itim;
+    border-radius: 8px;
+    margin-top: 0.2rem;
+    background-color: #d6dbdf;
+}
+
+
+
+.Postimage {
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 0rem;
+    
+    border-radius: 20px;
+}
+
+
+
+body {
+    margin: 0%;
+    background-color: #d6dbdf;
+    
+}}*/
+
+
+@media screen and ( max-width: 1200px) and (min-width:700px) {
+    
+    .MenuUp {
+        justify-content: space-around;
+    
+    }
+
+    .MenuDown {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        color: #eedbdb;
+        background: linear-gradient(180deg, rgb(255, 238, 176) 0%, rgb(255, 173, 156) 100%);
+        align-items: center;
+        justify-content: space-around;
+        filter: drop-shadow(0px -4px 6px #000000);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+
+
+    .MenuDown div {
+        text-align: center;
+        margin: 0.4rem;
+        padding: 0.4rem; 
+    }
+
+
+
+    .MenuDown button{
+        display: flex;
+        color: white;
+        filter: drop-shadow(0px 2px 1px #000000);
+        background: none;
+        border-radius: 24px;
+        text-decoration: none;
+        font-family: "Sour Gummy", sans-serif;
+        font-size: 16px;
+        font-weight: 550;
+        max-width: 100px;
+        align-items: center;
+        border: none;
+    }
+
+    .MenuDown div{
+        margin: 0.2rem;
+        padding: 0.2rem;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 2px 2px 2px black;
+        
+    }
+
+
+
+/*old post layout {.posts {
+    box-sizing: border-box;
+    display: grid;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 75px;
+    background-color: white;
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    position: static;
+    
+    
+    
+}
+
+
+.posts h2 {
+    background-color: #cacfd2;
+    border: 2px black solid;
+    border-radius: 20px;
+    font-family: Itim;
+    padding: 0.4rem;
+    font-size: 20px;
+    margin: 0;
+    position: static;
+    
+}
+
+.posts p {
+    border: solid #cacfd2 2px;
+    font-family: Itim;
+    border-radius: 8px;
+    margin-top: 0.2rem;
+    background-color: #d6dbdf;
+    text-wrap: wrap;
+
+}
+
+
+
+.Postimage {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0rem;
+    justify-content: start;
+    border-radius: 20px;
+    
+}}*/
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    main {
+       display: block;
+    }
+
+    .MenuUp {
+        display: flex;
+        justify-content: space-between;
+        
+        
+    }
+
+    .MenuUp ul {
+        display: flex;
+
+    }
+
+    .MenuUp :nth-child(2) {
+        order: -1;
+        margin-left: 24px;
+        
+    }
+
+    .MenuUp :nth-child(1){
+        margin-left: auto;
+    }
+
+    .MenuDown {
+        display: flex;
+        position: fixed;
+        filter: drop-shadow(0px -4px 6px #000000);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        bottom: 0;
+        left: 0;
+        width: 18.6%;
+        display: flex;
+        color: #ffffff;
+        background: linear-gradient(180deg, rgb(255, 238, 176) 0%, rgb(255, 173, 156) 100%);
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .MenuDown :not(:first-child):not(:last-child) {
+        display: none;
+    }
+
+    .MenuDown ul {
+        padding: 0.4rem;
+        margin: 0.4rem;
+    }
+
+    .masonry{
+        width: 80%;
+        margin-left: auto;
+    }
+
+    /*Dumbass decided to be an idiot and can't contain his own goddamn children, what an idiot*/
+    .MenuLeft {
+        display: flex;
+        position: fixed;
+        flex-basis: 10%;
+        width: 18.2%;
+        height: 100%;
+        margin-top: 60px;
+        justify-content: space-around;
+        background: linear-gradient(180deg, rgba(255,220,0,1) 0%, rgba(255,149,52,1) 100%);
+        
+        
+    }
+    
+    .search {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        border: 2px white solid;
+        height: 50%;
+        padding: 10px;
+        margin: 24px;
+        background-color: #e5e5e57e;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 500;
+       
+    
+    }
+
+    .searchBar {
+        border-radius: 24px;
+        padding: 4px;
+        padding-left: 8px;
+        margin-bottom: 5px;
+        font-size: 18px;
+        width: 80%;
+
+    }
+
+
+    .search div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 2px;
+        cursor: pointer;
+        transition: all 250ms;
+        
+    }
+
+    .item:hover {
+        background-color: #b9b9b9f3;
+        padding: 0.4rem;
+        border-radius: 24px;
+        transition: all 250ms;
+    }
+
+}

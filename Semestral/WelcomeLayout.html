@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WelcomeStyle.css">
+    <title>Catto Welcome Page</title>
+    <!--Font Sour Gummy, Open Sans from Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prociono&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prociono&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Fa Fa icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="FAVICON.png">
+    <a href="https://www.flaticon.com/free-icons/paw" title="paw icons"></a>
+      
+
+</head>
+
+<body class = "background">
+    <header class="Welcome">
+        <h1>
+            Welcome to Catto!
+        </h1>
+    </header>
+    
+    <div class="registerPopup" id="Popup">
+        <div class="popupGroup">
+            
+            <form>
+                <span class="closeBtn">&times;</span>
+                <h2>Register</h2>
+                <div class="unameDiv">
+                    <label for="username" style="font-family: Open Sans, sans-serif; font-size: 16px; color: rgb(0, 0, 0);text-shadow: 0px 1px black;">Username</label>
+                    <input type="text" style="border-radius: 24px; padding-left:5px;border: solid 2px black" id="username" placeholder="Enter your username" required>
+                </div>
+
+                <div class="mailDiv">
+                    <label for="email" style="font-family: Open Sans, sans-serif; font-size: 16px; color: rgb(0, 0, 0);text-shadow: 0px 1px black;">Email</label>
+                    <input type="email" style="border-radius: 24px; padding-left:5px;border: solid 2px black" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="paswDiv">
+                    <label for="password" style="font-family: Open Sans, sans-serif; font-size: 16px; color: rgb(0, 0, 0);text-shadow: 0px 1px black;">Password</label>
+                    <input type="password" style="border-radius: 24px; padding-left:5px;border: solid 2px black" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="buttonDiv">
+                    <button class="buttonReg" type="submit">Register</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <main class="mainArea">
+       
+        <div>
+            <div class="loginFloat">
+                <form class="floatContainer">
+    
+                    <div class="unameDiv">
+                        <label style="font-family: Open Sans, sans-serif; font-size: 16px; color: rgb(0, 0, 0);text-shadow: 0px 1px black;"  id="uname"><b>Username</b></label>
+                        <input style ="border-radius: 24px; padding-left:5px; border: solid 2px black" type="text" placeholder="Enter Username" id="uname" required>
+                    </div>
+    
+                    <div class="paswDiv">
+                        <label style="font-family: Open Sans, sans-serif; font-size: 16px;color: rgb(0, 0, 0);text-shadow: 0px 1px black;" id="psw"><b>Password</b></label>
+                        <input style="border-radius: 24px; padding-left:5px;border: solid 2px black" type="password" placeholder="Enter Password" id="psw" required>
+                    </div>  
+    
+                    <div class="buttonDiv"> <!--sort of works?-->
+                        <button class="loginButton" id="loginbutton" type="submit"><i class="fa fa-paw" style="font-size: 20px; padding-right: 15px;"></i>Log-in<i class="fa fa-paw" style="font-size: 20px;padding-left: 15px;"></i></button>
+                    </div>
+    
+                    <div class="register">
+                        <button>Don't have an account?</button>
+                    </div> 
+    
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class = "footerStyle">
+        <div class="footer">
+            <div>
+                <p><i class="fa fa-phone" style="font-size:20px; padding-right: 15px;"></i>Contact</p>
+            </div>
+            <div>
+                <p>@Copyright Catto, international cat sanctuary application + design help - Eliška Hrdá</p>
+            </div>
+            <div>
+                <p><i class="fa fa-phone" style="font-size:20px; padding-right: 15px;"></i>Support</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the modal and the button
+            const modal = document.getElementById('Popup'); //hleda prvek podle id
+            const openModalBtn = document.querySelector('.register'); //hleda podle nazvu css elementu
+            const closeModalBtn = document.querySelector('.closeBtn');
+
+            // Open the modal
+            openModalBtn.addEventListener('click', () => {
+                modal.style.display = 'flex';
+            });
+
+            // Close the modal
+            closeModalBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            // Close the modal when clicking outside of it
+            /*window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });*/
+        });
+
+        //takes me to main website without checking if i even entered a pasword
+        document.getElementById('loginbutton').addEventListener('click', function () {
+           // Get the values of the username and password fields
+            const username = document.getElementById('uname');
+            const password = document.getElementById('psw');
+            
+
+            // Check if both fields are filled
+            if (username === '' || password === '') {
+                alert('Please enter both a username and a password.');
+            } else {
+                // Redirect to MainLayout.html if both fields are filled
+                window.location.href = "MainLayout.html";
+            }
+        });
+    </script>
+</body>
+
+</html>
